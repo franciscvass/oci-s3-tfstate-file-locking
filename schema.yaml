@@ -158,6 +158,13 @@ variables:
     description: "https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm#Working2"
     required: true
 
+  TF_STATE_TABLE:
+    type: string
+    title: "ScyllaDB table name where to store tfstate file locking information."
+    pattern: ^[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]$
+    required: true
+    default: s3-locking-demo
+
   apigw_display_name:
     title: The name of the API Gateway resource.
     type: string
